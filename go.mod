@@ -4,7 +4,7 @@ go 1.22.6
 
 require (
 	github.com/go-chi/chi/v5 v5.1.0
-	github.com/jeannot-muller/marstore v0.3.0
+	github.com/jeannot-muller/marstore v1.0.0
 )
 
 require (

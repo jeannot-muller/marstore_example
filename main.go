@@ -36,7 +36,11 @@ var c = marstore.Config{
 }
 
 func main() {
-	marstore.InitializeStore(c) // Connect to the Redis server (configure the address and password accordingly)
+	err := marstore.InitializeStore(c) // Connect to the Redis server (configure the address and password accordingly)
+	if err != nil {
+		log.Printf("Initialization of store failed: %v", err)
+		os.Exit(1)
+	}
 
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)          // Logger needs to be the first entry to the middleware
