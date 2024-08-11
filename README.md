@@ -1,3 +1,4 @@
+![Logo](https://cdn.hashnode.com/res/hashnode/image/upload/v1723411109872/15d1269c-8fcc-4a72-adba-0222ff595b83.png)
 # Purpose of the 'marstore' package
 [![Go Reference](https://pkg.go.dev/badge/github.com/jeannot-muller/marstore.svg)](https://pkg.go.dev/github.com/jeannot-muller/marstore)
 
