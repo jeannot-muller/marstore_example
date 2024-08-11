@@ -18,6 +18,7 @@ github.com/gorilla/sessions v1.3.0 h1:XYlkq7KcpOB2ZhHBPv5WpjMIxrQosiZanfoy1HLZFz
 github.com/gorilla/sessions v1.3.0/go.mod h1:ePLdVu+jbEgHH+KWw8I1z2wqd0BAdAQh/8LRvBeoNcQ=
 github.com/jeannot-muller/marstore v1.1.0 h1:qfqQADOfSF1NxBEJsNlkvqsUX7NZo9pZ+TTINqzx6j4=
 github.com/jeannot-muller/marstore v1.1.0/go.mod h1:vxroyjjh+SP76le4pD8vc+d4KMOXOMONai/55HFDMUc=
+github.com/jeannot-muller/marstore v1.2.0/go.mod h1:vxroyjjh+SP76le4pD8vc+d4KMOXOMONai/55HFDMUc=
 github.com/no-src/redistore v0.0.0-20240730010141-6e59398609a4 h1:yUD8QQ/JftEom6JK441DO0sqOi4UuegU3U4Ghay4HIc=
 github.com/no-src/redistore v0.0.0-20240730010141-6e59398609a4/go.mod h1:RukrADHD4GAmLnH0RnAggIraehMkCa42PNP/gauw/5o=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
