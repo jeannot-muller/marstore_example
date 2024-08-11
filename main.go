@@ -44,6 +44,7 @@ func main() {
 	r.Use(marstore.SetupCORS(c))      // Apply CORS
 	r.Use(marstore.CSRFProtection(c)) // Apply the CORS middleware
 
+	// main route
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		_, err := w.Write([]byte("Hello, World!"))
 		if err != nil {
@@ -51,6 +52,7 @@ func main() {
 		}
 	})
 
+	// login route (when typed in, you'll be forwarded to Microsoft for authentication
 	r.Get("/login", func(w http.ResponseWriter, r *http.Request) {
 		err := marstore.LoginHandler(w, r, c)
 		if err != nil {
@@ -58,15 +60,17 @@ func main() {
 		}
 	})
 
-	r.Get("/logout", func(w http.ResponseWriter, r *http.Request) {
-		err := marstore.LogoutHandler(w, r, c)
+	// Microsoft will call this path with credentials and the User struct
+	r.Get("/auth/callback", func(w http.ResponseWriter, r *http.Request) {
+		err := marstore.CallbackHandler(w, r, c)
 		if err != nil {
 			return
 		}
 	})
 
-	r.Get("/auth/callback", func(w http.ResponseWriter, r *http.Request) {
-		err := marstore.CallbackHandler(w, r, c)
+	// This is a path to trigger a logout from Microsoft, deleting as well the local cookie.
+	r.Get("/logout", func(w http.ResponseWriter, r *http.Request) {
+		err := marstore.LogoutHandler(w, r, c)
 		if err != nil {
 			return
 		}
