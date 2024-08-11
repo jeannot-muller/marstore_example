@@ -29,6 +29,7 @@ var c = marstore.Config{
 	IsProduction:     os.Getenv("ENV") == "production",
 	RedisHostName:    "127.0.0.1",
 	RedisPort:        6379, // standard redis port number
+	RedisPoolSize:    10,   // standard pool size, change only it you face challenges
 	AllowOrigin:      []string{"*"},
 	AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 	AllowHeaders:     []string{"Content-Type", "Authorization"},
